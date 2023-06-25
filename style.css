@@ -47,10 +47,10 @@
     /*--GLOBAL FONTS-styles-*/
     --basicFont-weight: "normal";
     --littleFont-size: 0.8em;
-    --basicFont-size: 10px;
-    --interFont-size: 1.5em;
-    --middleFont-size: 2em;
-    --bigFont-size: 4em;
+    --basicFont-size: 12px;
+    --interFont-size: 1.25em;
+    --middleFont-size: 1.5em;
+    --bigFont-size: 2em;
     --colorFont-bright: #DFE0DF;
     --colorFont-dark: #4E5369;
 }
@@ -110,7 +110,7 @@ header {
 
     /*--Sizing--*/
     width: 100%;
-    height:8em;
+    height:10%;
 
     /*--Colors--*/
     background-color: var(--mainColor-Primary_dark);
@@ -119,31 +119,16 @@ header {
 
 /*--header div id : upperHeader--*/
 
-#upperHeader {
 
-    /*--Positionning*/
-
-
-    /*--Display--*/
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    /*--Content Align--*/
-    justify-content: space-evenly;
-
-    /*--Sizing--*/
-    height: 80%;
-
-
-}
 
 /*--header div img id : logo--*/
 
 /*--logo--*/
 #siteLogo {
-    margin-left: 2em;
-    width: 15%;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5em;
+    width: 25%;
 
 
 }
@@ -163,15 +148,22 @@ header {
 /*--title--*/
 
 #siteTitle {
+
+    display: flex;
+    align-items: center;
+    margin-left: 0.5em;
     /*--Sizing--*/
-    width: 80%;
+    width: 100%;
+    height: 100%;
+    
 
 
     /*--Outside Spacing--*/
 
-    margin-left: 2em;
+
 
     /*--Text Formating--*/
+    font-size: var(--bigFont-size);
     color: white;
 }
 
@@ -348,15 +340,14 @@ header {
 
 main {
 
-    
+
     /*--Positionning--*/
     position: fixed !important;
-    top: 2%;
-    left: 2%;
+    top: 11%;
 
     /*--Sizing--*/
-    width: 96%;
-    height: 96%;
+    width: 100%;
+    height: 80%;
 
     /*-- Overlap element--*/
     z-index: -10;
@@ -364,6 +355,11 @@ main {
     /*--Display- Scroll-*/
     overflow-x: scroll;
     overflow-x: hidden;
+
+    margin-left: auto;
+    margin-right: auto;
+
+   margin-top: 0.5em;
 
     /*--Background Formating--*/
     background-color: white;
@@ -392,10 +388,12 @@ main::-webkit-scrollbar {
 
     /*--Sizing--*/
     width: 98%;
-    height: 98%;
+    height: 97%;
 
-    margin-top: 4%;
-
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 
     /*--Inside Spacing--*/
 
@@ -423,6 +421,7 @@ main::-webkit-scrollbar {
 
     width: 100%;
     height: 100%;
+
 
 }
 /*--Compétences menu--*/
@@ -597,7 +596,7 @@ td {
 td {
 
     /*--Text Formating--*/
-    font-size: var(--middleFont-size);
+    font-size: var(--basicFont-size);
 }
 
 .tableRow:hover td {
@@ -608,7 +607,27 @@ td {
 }
 
 
-
-
-
 /*--------------------------------------------FOOTER--------------------------------------------*/
+
+#foot{
+    /*--Positionning--*/
+    bottom: 0;
+    position: fixed;
+    z-index: 0;
+
+    /*--Display--*/
+    display: flex;
+    
+
+    /*--Sizing--*/
+    width: 100%;
+    height:10%;
+
+    /*--Colors--*/
+    background-color: var(--mainColor-Primary_dark);
+
+}
+
+.footIcon a{
+    color: white;
+}
