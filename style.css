@@ -277,7 +277,7 @@ header {
     height: 100%;
 
     list-style-type: none;
-    box-shadow: 0 5px 3px -4px #0000003d;
+    box-shadow: 0     3px 3px -4px #0000003d;
 }
 
 #navList li a {
@@ -287,9 +287,6 @@ header {
 
 }
 
-#navList a:hover {
-    opacity: 1;
-}
 
 .subNavList {
     visibility: hidden;
@@ -383,7 +380,9 @@ main::-webkit-scrollbar {
 /*--Mainsections globals--*/
 
 .mainSection {
-
+    display: flex;
+    flex-direction: column;
+    
 
     border: var(--GlobalBorder-styleLight);
     border-radius: 14px;
@@ -392,6 +391,8 @@ main::-webkit-scrollbar {
     /*--Sizing--*/
     width: 98%;
     height: 98%;
+
+    margin-top: 4%;
 
 
     /*--Inside Spacing--*/
@@ -414,42 +415,68 @@ main::-webkit-scrollbar {
 }
 
 /*--subMainSection--*/
-
 .subMainSection {
 
-    /*--Size--*/
     width: 100%;
     height: 100%;
 
-    /*--Outside Spacing--*/
+}
+
+#compRowUp{
+
+    margin-top: 2%;
 
 
-    /*--Outside Spacing--*/
-    margin-left: auto;
-    margin-right: auto;
+}
 
+.compRow{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 33%;
+    
+}
 
-    /*--Colors--*/
-    background-color: transparent;
+.cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
- 
+    width: 33%;
+    height: 100%;
+}
+/*
+.blankCell{
+
+    background-color: var(--testColor-2);
+
+}
+
+.fullCell{
+
+    background-color: var(--testColor-1);
+
+}
+*/
+.fullCell a{
+margin-left: 1.5em;
+margin-right: 1.5em;
+padding: 0.5em;
+width: fit-content;
+text-align: center;
+
+ font-size: var(--interFont-size);
+ font-weight: var(--basicFont-weight);
+ color: var(--colorFont-bright);
+ text-decoration: none;
+ border: var(--GlobalBorder-styleLight);
+ border-radius: 14px;
+ background-color: var(--mainColor-Primary_light);
+
 }
 
 
 
-
-
-/*--subMainTextSection Presentation/CompétencesInformations/Loisirs--*/
-
-
-
-
-#presText{
-   margin-top:  15%;
-   height: 80%;
-
-
-}
 
 .subTitle {
     /*--Outside Spacing--*/
@@ -458,7 +485,7 @@ main::-webkit-scrollbar {
    
     /*--Text Formating--*/
     font-family: var(--secondaryFont-family);
-    font-size: var(--bigFont-size);
+    font-size: var(--middleFont-size);
 }
 
 .subContent {
@@ -480,127 +507,8 @@ main::-webkit-scrollbar {
 /*--MainSection Competences--*/
 /*--Compétences menu--*/
 
-#competences,
-.compRow,
-.fullCell,
-.fullCell a,
-#titleText {
-    /*--Display--*/
-    display: flex;
-
-}
-
-#competences {
 
 
-    /*--Positionning--*/
-    position: relative;
-
-    /*--Content Align--*/
-    flex-direction: column;
-
-}
-
-
-
-.compRow {
-    /*--Content Align--*/
-    justify-content: space-evenly;
-    align-items: center;
-
-    /*--Sizing--*/
-    width: 100%;
-    height: calc(100%/3);
-
-
-
-}
-
-.blankCell,
-.fullCell {
-    /*--Sizing--*/
-    width: 100%;
-    height: 100%;
-    /*--Outside Spacing--*/
-    margin: 0;
-
-}
-
-.fullCell,
-.fullCell a {
-    /*--Content Align--*/
-    justify-content: center;
-    align-items: center;
-
-
-
-
-}
-
-
-
-.fullCell a {
-    /*--Sizing--*/
-    width: 95%;
-    height: 3em;
-
-    /*--Text Formating--*/
-    text-align: center;
-    text-decoration: none;
-    font-size: var(--interFont-size);
-
-    /*--Border Formating--*/
-    border-radius: 14px !important;
-    color: var(--colorFont-bright);
-    /*--Background Formating--*/
-    background-color: var(--mainColor-Primary);
-
-
-}
-
-#titleCircle {
-    /*--Positionning--*/
-    position: absolute;
-
-
-    /*--Display--*/
-    display: block;
-    z-index: 1;
-
-    /*--Sizing & circle shaping--*/
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-
-    /*--Background Formating--*/
-    background-color: var(--mainColor-Primary_light);
-}
-
-#titleText {
-    /*--Content Align--*/
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-
-    /*--Sizing--*/
-    width: 100%;
-    height: 70%;
-
-    /*--Inside Spacing--*/
-    padding: 0.5em;
-
-    /*--Text Formating--*/
-    color: var(--colorFont-bright);
-    font-size: var(--interFont-size);
-}
-
-
-
-.illustrationArea {
-    /*--Display--*/
-    display: none;
-
-}
 
 
 /*--MainSection Parcours--*/
@@ -619,6 +527,7 @@ main::-webkit-scrollbar {
     height: 96%;
 
     /*--Outside Spacing--*/
+    
     margin-left: auto;
     margin-right: auto;
 
@@ -693,7 +602,7 @@ td {
 td {
 
     /*--Text Formating--*/
-    font-size: var(--interFont-size);
+    font-size: var(--middleFont-size);
 }
 
 .tableRow:hover td {
