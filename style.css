@@ -1,6 +1,3 @@
-
-
-
 /*--Feuille de style Cv */
 
 
@@ -181,141 +178,197 @@ header {
 
 /*  ----NAV BAR----
 
-nav  id :navSection 
-nav ul id : navList 
-nav ul li class : navItem 
-nav ul li ul class : subNavList
-nav ul li ul li class :  subNavItem
+
 
 */
+#sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    max-width: 300px;
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--mainColor-Primary_light);
+    box-shadow: 0 10px 20px -4px #000;
 
-
-#navSection {
-    /*--Sizing--*/
-    width: 100%;
-    height: 20%;
-
-    /*--Outside Spacing--*/
-    margin: 0 auto;
-
-    /*--Colors--*/
-    background-color: transparent !important;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, visibility 0.4s ease, transform 0.5s ease;
 }
 
-#navSection a {
-    /*--Positionning--*/
-    display: block;
+/* when the sideBar has 'show' class */
+#sideBar.show {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
 
-    /*--Inside Spacing--*/
-    padding: 10px 0px;
+.sideBarContent {
+    padding: 1rem 0;
+    pointer-events: none;
+    /* so that the sideBar does not get closed while clicking on sideBar_content */
+}
+
+.sideBarContent a {
+    pointer-events: all;
+    /* so that all the a inside sideBar_content are clickable */
+}
+
+.sideBarHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 15%;
+    background-color: var(--mainColor-Primary);
 
 
 
-    /*--Text Formating--*/
-    text-decoration: none;
+}
+
+.sideBarHead h1 {
+    margin-left: 0.5em;
+    text-transform: uppercase;
+    font-size: var(--middleFont-size);
     color: var(--colorFont-bright);
 
-    /*--Border Formating--*/
-    border-bottom: 2px solid transparent;
+}
+
+.sideBarBody {
+    height: 80%;
+    padding: 0;
+    margin: 0;
+    background-color: #ddd;
+    border-top: 0.3px solid var(--colorFont-dark);
+    border-bottom: 0.3px solid var(--colorFont-dark);
+}
+
+#sideNavlinks {
+    width: 100%;
+    height: 100%;
 
 }
 
-/*--navSection behaviour on mouse over--*/
-
-#navSection a:hover {
-
-    /*--Text Formating--*/
-    color: black;
-    ;
-    /*-- Border Formating--*/
-    border-bottom: 1px solid black;
-
-    /*--Colors--*/
-    background-color: var(--mainColor-Primary_light);
-}
+#navList {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 
 
-#navList,
-.subNavList {
-    /*--Text Formating--*/
-    list-style: none;
+    width: 100%;
+    height: 100%;
+
 
 }
 
+#navList li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1.5em;
+    height: 100%;
 
-.navItem {
-    /*--Positionning--*/
-    float: left;
+    list-style-type: none;
+    box-shadow: 0 5px 3px -4px #0000003d;
+}
 
-    /*--Sizing--*/
-    /*!! add a divider for each item added!!*/
-    width: calc(100%/6);
-
-    /*--Outside Spacing--*/
-    margin-top: 0%;
-    margin-bottom: 0%;
-
-    /*--Colors--*/
-    background-color: var(--mainColor-Accent_Color);
-
-    /*--Text Formating--*/
-    text-align: center;
+#navList li a {
+    font-size: var(--middleFont-size);
+    text-decoration: none;
+    letter-spacing: 1px;
 
 }
 
-
-
-/*--
-    Imported Code :
-    source :https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-menu-horizontal-sticky/
-
-    "Comme on applique un float : left à tous nos éléments de liste,
-     nous allons également utiliser le clearfix avec le pseudo-élément ::after
-     que nous allons appliquer à la liste en soi pour éviter que sa hauteur ne soit nulle."
-    
-    --*/
-#navList::after {
-
-    content: "";
-    display: table;
-    clear: both;
+#navList a:hover {
+    opacity: 1;
 }
-
-/*--SubMenu Behaviour--*/
 
 .subNavList {
-    /*--Display--*/
-    /*--Sub Menu is hidden--*/
-    display: none;
-
+    visibility: hidden;
 }
 
-nav>ul li:hover .subNavList {
-    /*--Display--*/
-    /*--Sub menu developps--*/
-    display: block;
+/*
+.sideBarFoot{  
+}
+*/
+/*---- sideBar-Toggler ----*/
+.sideBarToggler {
+    position: fixed;
+    top: 3em;
+    right: 3em;
+    width: 3em;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sideBarToggler span {
+    background-color: var(--mainColor-Primary_dark);
+    width: 100%;
+    height: 0.3em;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* so that it doesn't overlap the sideBar_toggler */
+}
+
+/* if the sideBar has 'show' class then their adjacent-sibling (i.e., sideBar_toggler) will... */
+#sideBar.show+.sideBarToggler {
+    justify-content: center;
+}
+
+#sideBar.show+.sideBarToggler span {
+    margin-top: -1.2px;
+    margin-bottom: -1.2px;
+}
+
+#sideBar.show+.sideBarToggler span:first-child {
+    transform: rotate(45deg);
+}
+
+#sideBar.show+.sideBarToggler span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+#sideBar.show+.sideBarToggler span:last-child {
+    transform: rotate(-45deg);
 }
 
 /*--------------------------------------------MAIN--------------------------------------------*/
 
 main {
+
+    
     /*--Positionning--*/
     position: fixed !important;
-    top: 20%;
+    top: 2%;
+    left: 2%;
 
     /*--Sizing--*/
-    width: 100%;
-    height: 70%;
+    width: 96%;
+    height: 96%;
 
     /*-- Overlap element--*/
-    z-index: 0;
+    z-index: -10;
 
     /*--Display- Scroll-*/
     overflow-x: scroll;
     overflow-x: hidden;
 
-     /*--Background Formating--*/
+    /*--Background Formating--*/
     background-color: white;
+
 
 
 }
@@ -331,9 +384,15 @@ main::-webkit-scrollbar {
 
 .mainSection {
 
+
+    border: var(--GlobalBorder-styleLight);
+    border-radius: 14px;
+
+
     /*--Sizing--*/
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 98%;
+
 
     /*--Inside Spacing--*/
 
@@ -359,16 +418,21 @@ main::-webkit-scrollbar {
 .subMainSection {
 
     /*--Size--*/
-    width: 99%;
+    width: 100%;
     height: 100%;
 
     /*--Outside Spacing--*/
- 
+
+
+    /*--Outside Spacing--*/
     margin-left: auto;
     margin-right: auto;
 
+
     /*--Colors--*/
     background-color: transparent;
+
+ 
 }
 
 
@@ -378,47 +442,30 @@ main::-webkit-scrollbar {
 /*--subMainTextSection Presentation/CompétencesInformations/Loisirs--*/
 
 
-.subMainTextSection {
-    /*--Sizing--*/
-    width: 96%;
-    height: 100%;
 
-    /*--Outside Spacing--*/
-    margin-top: 3em;
-    margin-left: auto;
-    margin-right: auto;
 
-    /*--Border Formating--*/
-    border: var(--GlobalBorder-styleLight);
-    border-radius: 14px;
-}
-
-.subText {
-    /*--Sizing--*/
-    width: 100%;
-    height: 60%;
-
-    /*--Outside Spacing--*/
-    margin-top: 4em;
+#presText{
+   margin-top:  15%;
+   height: 80%;
 
 
 }
 
 .subTitle {
     /*--Outside Spacing--*/
-    margin-top: 1em;
+    margin-top: 2em;
     margin-left: 1em;
-
+   
     /*--Text Formating--*/
     font-family: var(--secondaryFont-family);
-    font-size: var(--interFont-size);
+    font-size: var(--bigFont-size);
 }
 
 .subContent {
 
 
     /*--Outside Spacing--*/
-    margin-top: 1em;
+    margin-top: 2em;
     margin-left: 1.5em;
     ;
 
@@ -588,7 +635,7 @@ main::-webkit-scrollbar {
 table {
 
 
-    
+
     table-layout: fixed;
 
     width: 100%;
@@ -606,21 +653,21 @@ thead th {
 
     background-color: var(--shadowColor-Primary);
     text-align: center;
-        /*--Text Formating--*/
-        font-size: var(--interFont-size);
+    /*--Text Formating--*/
+    font-size: var(--interFont-size);
 }
 
-#leftTh{
+#leftTh {
     border-radius: 16px 0 0 0;
 }
 
-#rightTh{
+#rightTh {
 
-    border-radius:  0 16px 0  0 ;
+    border-radius: 0 16px 0 0;
 }
 
 thead th:nth-child(1) {
-    
+
 
     width: 20%;
 
@@ -645,8 +692,8 @@ td {
 
 td {
 
-        /*--Text Formating--*/
-        font-size: var(--interFont-size);
+    /*--Text Formating--*/
+    font-size: var(--interFont-size);
 }
 
 .tableRow:hover td {
@@ -656,27 +703,8 @@ td {
 
 }
 
+/*--------------------------------------------MAIN--------------------------------------------*/
+
 
 
 /*--------------------------------------------FOOTER--------------------------------------------*/
-
-footer {
-
-    /*--Positionning--*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
-    width: 100%;
-    bottom: 0%;
-    height: 8%;
-    color: var(--colorFont-bright);
-    background-color: var(--mainColor-Primary_dark);
-}
-
-.footerSection {
-    margin: 2em;
-}

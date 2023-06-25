@@ -5,33 +5,28 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <link rel="stylesheet" href="style.css">
-  <script type="module" src="script.js" ></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
   <title>Vincent Fauré</title>
 </head>
 
 <body>
+<aside id="sideBar">
 
-  <header id="head">
-    
-    <div id="upperHeader">
-      <span id="siteLogo">
-        <img src="/assets/images/pseudo-logo-resized.png" alt="personnal logo" id="logo" />
-      </span>
-      <h1 id="siteTitle">Vincent Fauré</h1>
-    </div>
-
-
-    <nav id="navSection">
+  <div class="sideBarContent sideBarHead">
+    <h1>Rubriques</h1>
+  </div>
+  <div class="sideBarContent sideBarBody">
+    <nav id="sideNavlinks">
       <ul id="navList">
         <li class="navItem"><a href="#presentation">Presentation</a></li>
         <li class="navItem"><a href="#competences">Compétences</a>
-          <ul class="subNavList">
+   <!--      <ul class="subNavList">
             <li class="subnavItem"><a href="#informatique">Informatique</a></li>
             <li class="subnavItem"><a href="#communication">Communication</a></li>
             <li class="subnavItem"><a href="#animation">Animation</a></li>
             <li class="subnavItem"><a href="#technique">Technique du bâtiment</a></li>
-          </ul>
+          </ul>--> 
         </li>
         <li class="navItem"><a href="#parcours">Parcours</a></li>
         <li class="navItem"><a href="#loisirs">Loisirs</a></li>
@@ -39,12 +34,28 @@
         <li class="navItem"><a href="#liens">Liens</a></li>
       </ul>
     </nav>
-  </header>
 
+  </div>
+  <div class="sideBarContent sideBarFoot">
+    <p>&#xa9 Vincent Fauré 2023 </p>
+  </div>
+</aside>
+
+
+<div class="sideBarToggler">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+ <!-- <header id="head">
+   
+  </header>
+-->
   <main>
 
-    <section class="mainSection">
-      <div class="subMainTextSection" id="presentation">
+    <section class="mainSection" >
+      <div class="subMainSection" id="presentation">
         <div class="subText" id="presText">
           <p class="subTitle">Bienvenue,</p>
           <p class="subContent">Je suis un Junior Developper full stack, je cherche à integrer une équipe afin d'evoluer
@@ -57,10 +68,10 @@
         </div>
       </div>
     </section>
-    
-    <section class="mainSection">
+
+    <section class="mainSection" >
       <div class="subMainSection" id="competences">
-    
+
         <div class="compRow" id="compRowUp">
           <div class="blankCell"></div>
           <div class="fullCell"><a href="#informatique">Informatique</a></div>
@@ -72,23 +83,23 @@
             <div id="titleCircle"></div>
             <p id="titleText">Compétences</p>
           </div>
-    
+
           <div class="fullCell"><a href="#animation">Animation</a></div>
         </div>
-    
+
         <div class="compRow" id="compRowBottom">
           <div class="blankCell"></div>
           <div class="fullCell"><a href="#technique">Technique</a></div>
           <div class="blankCell"></div>
-    
-    
+
+
         </div>
       </div>
-    
-    
+
+
       <div class="subMainTextSection" id="informatique">
-    
-        <div class="subText" >
+
+        <div class="subText">
           <p class="subTitle">Informatique</p>
           <p class="subContent">Installation et configuration d'un environnement numérique. </p>
           <p class="subContent">Résolution de problèmes techniques. </p>
@@ -98,14 +109,14 @@
           <p class="subContent">Traitement de l'information et des données </p>
           <p class="subContent">Stockage et gestion des données</p>
         </div>
-    
+
         <div class="illustrationArea">
           <p>Il y aura une illustration ici</p>
         </div>
       </div>
-    
+
       <div class="subMainTextSection" id="communication">
-    
+
         <div class="subText">
           <p class="subTitle">Communication</p>
           <p class="subContent">Création de contenu </p>
@@ -118,33 +129,34 @@
           <p class="subContent">Anglais (C1) </p>
           <p class="subContent">Espagnol (B2) </p>
         </div>
-    
+
         <div class="illustrationArea">
           <p>Il y aura une illustration ici</p>
         </div>
-    
-    
+
+
       </div>
-    
-    
+
+
       <div class="subMainTextSection" id="animation">
         <div class="subText">
           <p class="subTitle">Animation </p>
           <p class="subContent"> Organiser, coordonner un événement </p>
           <p class="subContent">Promouvoir une proposition, un projet </p>
           <p class="subContent">Animer, coordonner une équipe </p>
-          <p class="subContent">Adapter ses pratiques d'accueil et d'accompagnement<br> selon les besoins particuliers des
+          <p class="subContent">Adapter ses pratiques d'accueil et d'accompagnement<br> selon les besoins particuliers
+            des
             personnes </p>
-    
+
           <div class="illustrationArea">
             <p>Il y aura une illustration ici</p>
           </div>
         </div>
       </div>
-    
-    
+
+
       <div class="subMainTextSection" id="technique">
-    
+
         <div class="subText">
           <span class="subTitle">Technique du bâtiment</span>
           <p class="subContent">Réaliser et vérifier des calculs de mathématiques </p>
@@ -152,23 +164,24 @@
           <p class="subContent">Raccorder, gérer un réseau technique </p>
           <p class="subContent">Installer un système électrique </p>
           <p class="subContent">Raccorder des éléments basse tension </p>
-          <p class="subContent">Raccorder une armoire électrique aux équipements de locaux <br> domestiques ou tertiaires
+          <p class="subContent">Raccorder une armoire électrique aux équipements de locaux <br> domestiques ou
+            tertiaires
           </p>
           <p class="subContent">Respecter les normes de sécurité </p>
-    
+
           <div class="illustrationArea">
             <p>Il y aura une illustration ici</p>
           </div>
         </div>
-    
+
       </div>
-    
+
     </section>
 
-    <section class="mainSection" id="parcours">
+    <section class="mainSection" >
 
-      <div class="subMainSection" id="chronologie">
-        <table>
+      <div class="subMainSection" id="parcours">
+        <table id="chronologie">
 
           <thead>
             <th id="leftTh" scope="col">Année</th>
@@ -230,8 +243,8 @@
 
     </section>
 
-    <section class="mainSection">
-      <div class="subMainTextSection"  id="loisirs">
+    <section class="mainSection" >
+      <div class="subMainTextSection" id="loisirs">
         <div class="subText" id="loisirsText">
           <p class="subTitle">Loisirs</p>
           <p class="subContent">Littérature Classique, S.F, Américaine </p>
@@ -243,7 +256,7 @@
       </div>
     </section>
 
-    <section class="mainSection">
+    <section class="mainSection" >
       <div class="subMainTextSection" id="informations">
         <div class="subText" id="infoText">
           <p class="subTitle">Informations
@@ -256,15 +269,15 @@
       </div>
     </section>
 
-    <section class="mainSection">
-      <div class="subMainTextSection" id="liens">
+    <section class="mainSection" id="liens">
+      <div class="subMainTextSection" >
         <h2>Liens</h2>
         <p> Quelques liens vers mes projets</p>
       </div>
-      </section>
+    </section>
 
   </main>
-
+<!--
   <footer>
     <section class="footerSection" id="info">
       <p>Informations</p>
@@ -272,7 +285,7 @@
     <section class="footerSection" id="contact">
       <p>Contact</p>
     </section>
-  </footer>
+  </footer>-->
 </body>
 
 </html>
