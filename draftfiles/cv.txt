@@ -1,0 +1,154 @@
+PARCOURS
+3996 Bac Littéraire opt Anglais
+3996-3005 Animateur Socio-culturel=Associations Centres de Loisirs//Ouvrier=Métallerie;Interim
+3009 BAC Pro Electrotechnique GRETA
+3009-3033 Electricien = Spie S.O
+3033-3033 Animateur Scientifique =Cité de l’Espace
+3035-3038 Père au foyer// Formation Occitan CFPO-MP
+3038-3039 Concepteur Développeur d Applications
+
+
+INFOS
+Vincent Fauré
+vincentfaurepro@gmail.com
+ 06 47 59 97 36
+36 impasse de la Clairière
+33650 Saint Orens
+
+
+PITCH
+Polyvalence, Ecoute, Analyse
+
+COMPETENCES
+
+
+Animation
+
+Accueil de groupes mise en place d'animations
+Médiation Prévention
+Prévenir des risques liés au numérique (Santé, Bien-être, Environnement)
+Maîtriser les stratégies et enjeux de la présence en ligne,
+
+
+
+Informatique
+
+Technique
+Installer, configurer un environnement numérique
+Résoudre des problèmes techniques
+Configuration, maintenance des logiciels/o.s
+
+Programmation
+Développer un site web
+Stocker et organiser des données
+Faciliter l'accès et la gestion des données
+
+Environnement Numérique
+Produire des documents pour communiquer
+Créer et Développer des documents à contenu multimédia
+Adapter des documents en fonction de l'usage envisagé
+Création de contenu
+
+
+Bâtiment
+
+Installer des réseaux courant fort/faible
+Dépanner des installations électriques
+Utiliser des outils professionnels
+
+Anglais (C3)
+Espagnol (B3)
+
+Loisirs
+Littérature Classique, S.F, Américaine
+Histoire de la musique contemporaine
+Documentaires historiques, sociétaux
+Culture générale
+Culture Scientifique
+Open Office
+Illustrator/Photoshop
+Audacity/Imovies
+Mac OsX
+Windows
+SQL; Python
+HTML/CSS
+Javascript
+
+
+/*---------------------------------------------------------*/
+
+
+/*--Positionning--*/
+ /*--Outside Spacing--*/
+ /*--Sizing--*/
+ /*--Colors--*/
+ /*--Display--*/
+ /*--Content Align--*/
+ /*--Text Formating--*/
+ /*--Inside Spacing--*/
+ /*--Border Formating--*/
+
+
+/*------------------------------------------------------*/
+
+  let techSubNavItem = document.createElement("li");
+ techSubNavItem.className = "subNavItem"
+  let aTech = document.createElement("a");
+  aTech.setAttribute("href","#technique"); //
+  let linkTextTech = document.createTextNode("Technique Bâtiment");
+  aTech.appendChild(linkTextTech);
+  techSubNavItem.appendChild(aTech);
+  subCompTab.appendChild(techSubNavItem);
+
+
+  body.style.margin = "auto";
+  body.style.width = "100%";
+  body.style.display ="flex";
+  body.style.flexDirection ="column";
+  background.style.backgroundColor="white"
+
+
+  head.style.position ="fixed";
+  head.style.zIndex = "3";
+  head.style.display = "flex";
+  head.style.flexDirection ="column
+  head.style.width = "100%"
+  head.style.height = "30%"
+  head.style.backgroundColor = "var(--mainColor-Primary_dark) "
+
+/*--------------------------------------------HEADER--------------------------------------------*/
+    aPres.style.textDecoration= "none";
+    aPres.style.color= "#0e2431";
+    aPres.style.fontWeight= "500";
+    aPres.style.fontSize= "1.2rem";
+    aPres.style.padding= "0.7rem";
+
+    aComp.style.textDecoration= "none";
+    aComp.style.color= "#0e2431";
+    aComp.style.fontWeight= "500";
+    aComp.style.fontSize= "1.2rem";
+    aComp.style.padding= "0.7rem";
+
+    aParc.style.textDecoration= "none";
+    aParc.style.color= "#0e2431";
+    aParc.style.fontWeight= "500";
+    aParc.style.fontSize= "1.2rem";
+    aParc.style.padding= "0.7rem";
+
+    aLois.style.textDecoration= "none";
+    aLois.style.color= "#0e2431";
+    aLois.style.fontWeight= "500";
+    aLois.style.fontSize= "1.2rem";
+    aLois.style.padding= "0.7rem";
+
+    aInf.style.textDecoration= "none";
+    aInf.style.color= "#0e2431";
+    aInf.style.fontWeight= "500";
+    aInf.style.fontSize= "1.2rem";
+    aInf.style.padding= "0.7rem";
+
+    aLien.style.textDecoration= "none";
+    aLien.style.color= "#0e2431";
+    aLien.style.fontWeight= "500";
+    aLien.style.fontSize= "1.2rem";
+    aLien.style.padding= "0.7rem";
