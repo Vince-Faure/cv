@@ -292,8 +292,8 @@ header {
 .sideBarToggler {
     position: fixed;
     
-    top: 2em;
-    right: 3em;
+    top: 1em;
+    right: 2em;
     width: 3em;
     height: 3rem;
     display: flex;
@@ -307,7 +307,8 @@ header {
     
     background-color: var(--mainColor-Primary_light);
     width: 100%;
-    height: 0.3em;
+    height: 0.2em;
+    
     transition: all 0.3s ease;
     pointer-events: none;
     /* so that it doesn't overlap the sideBar_toggler */
@@ -344,6 +345,7 @@ main {
     /*--Positionning--*/
     position: fixed !important;
     top: 11%;
+    
 
     /*--Sizing--*/
     width: 100%;
@@ -382,8 +384,6 @@ main::-webkit-scrollbar {
     flex-direction: column;
     
 
-    border: var(--GlobalBorder-styleLight);
-    border-radius: 14px;
 
 
     /*--Sizing--*/
@@ -617,7 +617,9 @@ td {
 
     /*--Display--*/
     display: flex;
-    
+    justify-content: right;
+    align-items: center;
+   
 
     /*--Sizing--*/
     width: 100%;
@@ -625,9 +627,6 @@ td {
 
     /*--Colors--*/
     background-color: var(--mainColor-Primary_dark);
-
-}
-
-.footIcon a{
     color: white;
 }
+
