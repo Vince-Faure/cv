@@ -13,28 +13,22 @@
 
 <body>
   <header>
-<div id="siteLogo"><a href="#presentation">
-  <img id="logo" src="/assets/images/pseudo-logo-resized.png" alt=""></a>
-</div>
-<div id="siteTitle">Vincent Fauré</div>
-
-  </header>
-<aside id="sideBar">
-
-  <div class="sideBarContent sideBarHead">
-    <h1>Rubriques</h1>
-  </div>
-  <div class="sideBarContent sideBarBody">
-    <nav id="sideNavlinks">
+    <div id="bannerHeader">
+      <div id="siteLogo"><a href="#presentation">
+          <img id="logo" src="/assets/images/pseudo-logo-resized.png" alt=""></a>
+      </div>
+      <div id="siteTitle">Vincent Fauré</div>
+    </div>
+    <nav id="navSection">
       <ul id="navList">
-        <li class="navItem"><a href="#presentation">Presentation</a></li>
+        
         <li class="navItem"><a href="#competences">Compétences</a>
-   <!--      <ul class="subNavList">
-            <li class="subnavItem"><a href="#informatique">Informatique</a></li>
-            <li class="subnavItem"><a href="#communication">Communication</a></li>
-            <li class="subnavItem"><a href="#animation">Animation</a></li>
-            <li class="subnavItem"><a href="#technique">Technique du bâtiment</a></li>
-          </ul>--> 
+           <ul class="subNavList">
+        <li class="subnavItem"><a href="#informatique">Informatique</a></li>
+        <li class="subnavItem"><a href="#communication">Communication</a></li>
+        <li class="subnavItem"><a href="#animation">Animation</a></li>
+        <li class="subnavItem"><a href="#technique">Technique du bâtiment</a></li>
+      </ul>
         </li>
         <li class="navItem"><a href="#parcours">Parcours</a></li>
         <li class="navItem"><a href="#loisirs">Loisirs</a></li>
@@ -43,33 +37,66 @@
       </ul>
     </nav>
 
-  </div>
-  <div class="sideBarContent sideBarFoot">
-    <p>&#xa9 Vincent Fauré 2023 </p>
-  </div>
-</aside>
+  </header>
 
-<!--
+
+
+
+
+
+  <div id="sideBar">
+
+    <div class="sideBarContent sideBarHead">
+      <h1>Rubriques</h1>
+    </div>
+    <div class="sideBarContent sideBarBody">
+      <nav id="sideNavlinks">
+        <ul id="asideNavList">
+          <li class="asideNavItem"><a href="#presentation">Presentation</a></li>
+          <li class="asideNavItem"><a href="#competences">Compétences</a>
+            <!--      <ul class="subNavList">
+            <li class="subasideNavItem"><a href="#informatique">Informatique</a></li>
+            <li class="subasideNavItem"><a href="#communication">Communication</a></li>
+            <li class="subasideNavItem"><a href="#animation">Animation</a></li>
+            <li class="subasideNavItem"><a href="#technique">Technique du bâtiment</a></li>
+          </ul>-->
+          </li>
+          <li class="asideNavItem"><a href="#parcours">Parcours</a></li>
+          <li class="asideNavItem"><a href="#loisirs">Loisirs</a></li>
+          <li class="asideNavItem"><a href="#informations">Informations</a></li>
+          <li class="asideNavItem"><a href="#liens">Liens</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="sideBarContent sideBarFoot">
+      <p>&#xa9 Vincent Fauré 2023 </p>
+    </div>
+  </div>
+
+  <!--
 <div class="sideBarToggler">
   <span></span>
   <span></span>
   <span></span>
 </div>
 -->
-<button class="menu" aria-label="Main Menu" >
-  <svg  width="100" height="100" viewBox="0 0 100 100" id="burgerButton">
-    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-    <path class="line line2" d="M 20,50 H 80" />
-    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-  </svg>
-</button>
- <!-- <header id="head">
+  <button class="menu" aria-label="Main Menu">
+    <svg width="100" height="100" viewBox="0 0 100 100" id="burgerButton">
+      <path class="line line1"
+        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+      <path class="line line2" d="M 20,50 H 80" />
+      <path class="line line3"
+        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+    </svg>
+  </button>
+  <!-- <header id="head">
    
   </header>
 -->
   <main>
 
-    <section class="mainSection" >
+    <section class="mainSection">
       <div class="subMainSection" id="presentation">
         <div class="subText" id="presText">
           <p class="subTitle">Bienvenue,</p>
@@ -85,27 +112,27 @@
     </section>
 
     <section class="mainSection" id="competences">
-      <div class="subMainSection"id="compMenu">
-        
-          <div class="compRow" id="compRowUp">
-            <div class="cell blankCell"></div>
-            <div class="cell fullCell"><a href="#informatique">Informatique</a></div>
-            <div class="cell blankCell"></div>
-          </div>
-          <div class="compRow" id="compRowMiddle">
-            <div class="cell fullCell"><a href="#communication">Communication</a></div>
-            <div class="cell blankCell"></div>
-            <div class="cell fullCell"><a href="#animation">Animation</a></div>
-          </div>
-          <div class="compRow" id="compRowBottom">
-            <div class="cell blankCell"></div>
-            <div class="cell fullCell"><a href="#technique">Technique</a></div>
-            <div class="cell blankCell"></div>
-          </div>
+      <div class="subMainSection" id="compMenu">
+
+        <div class="compRow" id="compRowUp">
+          <div class="cell blankCell"></div>
+          <div class="cell fullCell"><a href="#informatique">Informatique</a></div>
+          <div class="cell blankCell"></div>
         </div>
- 
+        <div class="compRow" id="compRowMiddle">
+          <div class="cell fullCell"><a href="#communication">Communication</a></div>
+          <div class="cell blankCell"></div>
+          <div class="cell fullCell"><a href="#animation">Animation</a></div>
+        </div>
+        <div class="compRow" id="compRowBottom">
+          <div class="cell blankCell"></div>
+          <div class="cell fullCell"><a href="#technique">Technique</a></div>
+          <div class="cell blankCell"></div>
+        </div>
+      </div>
+
     </section>
-<section class="mainSection">
+    <section class="mainSection">
       <div class="subMainSection" id="informatique">
 
         <div class="subText">
@@ -119,8 +146,8 @@
           <p class="subContent">Stockage et gestion des données</p>
         </div>
       </div>
-</section>
-<section class="mainSection">
+    </section>
+    <section class="mainSection">
       <div class="subMainSection" id="communication">
 
         <div class="subText">
@@ -140,9 +167,9 @@
 
 
       </div>
-</section>
+    </section>
 
-<section class="mainSection">
+    <section class="mainSection">
       <div class="subMainSection" id="animation">
         <div class="subText">
           <p class="subTitle">Animation </p>
@@ -156,9 +183,9 @@
 
         </div>
       </div>
-</section>
+    </section>
 
-<section class="mainSection">
+    <section class="mainSection">
       <div class="subMainSection" id="technique">
 
         <div class="subText">
@@ -179,11 +206,11 @@
       </div>
 
     </section>
-</section>
+    </section>
     <section class="mainSection" id="parcours">
 
-      <div class="subMainSection"id="chronologie" >
-        <table >
+      <div class="subMainSection" id="chronologie">
+        <table>
 
           <thead>
             <th id="leftTh" scope="col">Année</th>
@@ -246,7 +273,7 @@
     </section>
 
     <section class="mainSection" id="loisirs">
-      <div class="subMainSection" >
+      <div class="subMainSection">
         <div class="subText" id="loisirsText">
           <p class="subTitle">Loisirs</p>
           <p class="subContent">Littérature Classique, S.F, Américaine </p>
@@ -259,7 +286,7 @@
     </section>
 
     <section class="mainSection" id="informations">
-      <div class="subMainSection" >
+      <div class="subMainSection">
         <div class="subText" id="infoText">
           <p class="subTitle">Informations
 
@@ -272,14 +299,14 @@
     </section>
 
     <section class="mainSection" id="liens">
-      <div class="subMainSection" >
+      <div class="subMainSection">
         <div class="subText" id="linkText">
           <p class="subTitle">Liens
 
           <p class="subContent"> Quelques liens vers mes projets </p>
-          
+
         </div>
- 
+
 
       </div>
     </section>
@@ -288,9 +315,10 @@
 
 
 </body>
-  <footer id="foot">
-    <span class="footIcon"><img src="assets/images/download.png" href="/assets/doc/cv.txt" alt="">Mon C.v Pdf</span>
-      <span class="footIcon"><img src="assets/images/mail.png" alt="" href="vincentfaurepro@gmail.com">Mail me</span>
-    
-  </footer>
+<footer id="foot">
+  <span class="footIcon"><img src="assets/images/download.png" href="/assets/doc/cv.txt" alt="">Mon C.v Pdf</span>
+  <span class="footIcon"><img src="assets/images/mail.png" alt="" href="vincentfaurepro@gmail.com">Mail me</span>
+
+</footer>
+
 </html>

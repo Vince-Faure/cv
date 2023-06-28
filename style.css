@@ -24,7 +24,7 @@
     --testColor-2: blue;
 
     --testBorder-1: 2px solid red;
-    --testBorder-2: 2px solid blue;
+    --testBorder-2: 5px solid blue;
 
     /*GLOBAL COLORS--*/
     --mainColor-Primary: #6E5E73;
@@ -108,18 +108,18 @@ body {
 }
 
 /*--------------------------------------------HEADER--------------------------------------------*/
-/*Small devices (landscape phones, 576px and up)*/
-@media (max-width: 767px) { ... }
+
 
 
 header {
 
     /*--Positionning--*/
     position: fixed;
-    z-index: 0;
+    
 
     /*--Display--*/
     display: flex;
+    flex-direction: column;
     
 
     /*--Sizing--*/
@@ -130,12 +130,23 @@ header {
     background-color: var(--mainColor-Primary_dark);
 
 }
+#navSection{
+    display: none;
+    visibility: hidden;
+}
 
-/*--header div id : upperHeader--*/
+/*--header div id : bannerHeader--*/
+
+#bannerHeader{
+
+    display: flex;
+    
+}
 
 
 
 /*--header div img id : logo--*/
+
 
 /*--logo--*/
 #siteLogo {
@@ -264,7 +275,7 @@ header {
 
 }
 
-#navList {
+#asideNavList {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -276,7 +287,7 @@ header {
 
 }
 
-#navList li {
+#asideNavList li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -287,7 +298,7 @@ header {
     box-shadow: 0     3px 3px -4px #0000003d;
 }
 
-#navList li a {
+#asideNavList li a {
     font-size: var(--middleFont-size);
     text-decoration: none;
     letter-spacing: 1px;
@@ -295,9 +306,6 @@ header {
 }
 
 
-.subNavList {
-    visibility: hidden;
-}
 
 /*
 .sideBarFoot{  
@@ -490,6 +498,12 @@ main::-webkit-scrollbar {
 
 }
 /*--Compétences menu--*/
+#compMenu{
+ margin-left: auto;
+ margin-right: auto;
+
+
+}
 #compRowUp{
 
     margin-top: 2%;
@@ -518,20 +532,18 @@ main::-webkit-scrollbar {
 
     background-color: var(--testColor-2);
 
-}
+}*/
 
-.fullCell{
 
-    background-color: var(--testColor-1);
 
-}
-*/
 .fullCell a{
-margin-left: 1.5em;
-margin-right: 1.5em;
-padding: 0.5em;
-width: fit-content;
+
+margin-right: auto;
+margin-left: auto;
+width: 9em;
+height :3em;
 text-align: center;
+line-height:3em;
 
  font-size: var(--interFont-size);
  font-weight: var(--basicFont-weight);
@@ -695,3 +707,226 @@ td {
     color: white;
 }
 
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 768px) { 
+
+    :root {
+
+
+    
+        --primaryFont-family: "roboto-regular";
+        --secondaryFont-family: "DMSans-regular";
+    
+        /*--GLOBAL FONTS-styles-*/
+        --basicFont-weight: "normal";
+        --littleFont-size: 0.8em;
+        --basicFont-size: 18px;
+        --interFont-size: 1.25em;
+        --middleFont-size: 1.5em;
+        --bigFont-size: 2em;
+
+    }
+   
+    .menu{
+        display: none;
+        visibility: hidden;
+    }
+
+    #sideBar{
+        display: none;
+        visibility: hidden;
+    
+    
+       
+        
+    }
+
+    header{
+        height :20%;
+        background-color:transparent;
+    }
+
+    /*--header div img id : logo--*/
+
+/*--logo--*/
+#bannerHeader{
+    /*--Display--*/
+    display: flex;
+    flex-direction: row;
+
+    /*--Content Align--*/
+    justify-content: space-evenly;
+
+    /*--Sizing--*/
+    height: 80%;
+background-color: var(--mainColor-Accent_Color);
+
+}
+
+#siteLogo {
+
+    margin-left: 1em;
+    width: 15%;
+
+
+}
+
+#logo {
+    /*--Positionning*/
+
+    /*inherit from upperHeader.display:flex & upperHeader.flex-direction :row & upperHeader.justify-content:space-evenly--*/
+
+    /*--Ratio--*/
+    max-width: 100%;
+    height: auto;
+}
+
+/*--header div span id : sitetitle--*/
+
+/*--title--*/
+
+#siteTitle {
+
+
+    margin-left:2em;
+    /*--Sizing--*/
+    width: 100%;
+    height: 100%;
+    
+
+
+    /*--Outside Spacing--*/
+
+
+
+    /*--Text Formating--*/
+    
+    font-size: var(--bigFont-size);
+    color: white;
+}
+
+#navSection {
+    visibility: visible;/*problem */
+    /*--Sizing--*/
+    width: 100%;
+    height: 20%;
+
+    /*--Outside Spacing--*/
+    margin: 0 auto;
+
+    /*--Colors--*/
+    background-color: transparent !important;
+}
+
+#navSection a {
+    /*--Positionning--*/
+    display: block;
+
+    /*--Inside Spacing--*/
+    padding: 10px 0px;
+
+
+
+    /*--Text Formating--*/
+    text-decoration: none;
+    color: white;
+
+    /*--Border Formating--*/
+    border-bottom: 2px solid transparent;
+
+}
+
+/*--navSection behaviour on mouse over--*/
+
+#navSection a:hover {
+
+    /*--Text Formating--*/
+    color: black;
+    ;
+    /*-- Border Formating--*/
+    border-bottom: 1px solid black;
+
+    /*--Colors--*/
+    background-color: var(--mainColor-Primary_light);
+}
+
+
+#navList,
+.subNavList {
+    /*--Text Formating--*/
+    list-style: none;
+
+}
+
+
+.navItem {
+    /*--Positionning--*/
+    float: left;
+
+    /*--Sizing--*/
+    /*!! add a divider for each item added!!*/
+    width: calc(100%/5);
+
+    /*--Outside Spacing--*/
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+    /*--Colors--*/
+    background-color: var(--mainColor-Accent_Color);
+
+    /*--Text Formating--*/
+    text-align: center;
+
+}
+
+
+
+/*--
+    Imported Code :
+    source :https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-menu-horizontal-sticky/
+
+    "Comme on applique un float : left à tous nos éléments de liste,
+     nous allons également utiliser le clearfix avec le pseudo-élément ::after
+     que nous allons appliquer à la liste en soi pour éviter que sa hauteur ne soit nulle."
+    
+    --*/
+#navList::after {
+
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*--SubMenu Behaviour--*/
+
+.subNavList {
+    /*--Display--*/
+    /*--Sub Menu is hidden--*/
+    display: none;
+
+}
+
+nav>ul li:hover .subNavList {
+    /*--Display--*/
+    /*--Sub menu developps--*/
+    display: block;
+}
+/*---------------------------MAIN------------------*/
+main {
+
+
+    top: 20%;
+    width: 98%;
+    height: 67%;
+    margin-left: 0.4em;
+    
+    
+
+  
+    border: var(--testBorder-2);
+
+
+
+}
+
+ }
