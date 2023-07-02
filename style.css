@@ -27,12 +27,11 @@
     --testBorder-2: 5px solid blue;
 
     /*GLOBAL COLORS--*/
-    --mainColor-Primary: #6E5E73;
-    --mainColor-Primary_dark: #4E5369;
-    --mainColor-Primary_light: #8A6B76;
-    --mainColor-Accent_Color: #2F4858;
-    --shadowColor-Primary: #2f48588f;
-    --shadowColor-Light: #2f48584b;
+    --mainColor-Primary: #0E8388;
+    --mainColor-Primary_dark: #2E4F4F;
+    --mainColor-Primary_light: #CBE4DE;
+    --mainColor-Accent_Color: #2C3333;
+
 
     --GlobalBorder-style: 4px solid #2F4858;
     --GlobalBorder-styleLight: 1px solid #2F4858;
@@ -124,7 +123,7 @@ header {
 
     /*--Sizing--*/
     width: 100%;
-    height:10%;
+    height:8em;
 
     /*--Colors--*/
     background-color: var(--mainColor-Primary_dark);
@@ -132,7 +131,7 @@ header {
 }
 #navSection{
     display: none;
-    visibility: hidden;
+
 }
 
 /*--header div id : bannerHeader--*/
@@ -152,8 +151,9 @@ header {
 #siteLogo {
     display: flex;
     align-items: center;
-    margin-left: 0.5em;
-    width: 25%;
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 10%;
 
 
 }
@@ -547,7 +547,7 @@ line-height:3em;
 
  font-size: var(--interFont-size);
  font-weight: var(--basicFont-weight);
- color: var(--colorFont-bright);
+ color: var(--mainColor-Accent_Color);
  text-decoration: none;
  border: var(--GlobalBorder-styleLight);
  border-radius: 14px;
@@ -631,7 +631,7 @@ thead th {
 
     height: 4em;
 
-    background-color: var(--shadowColor-Primary);
+    background-color: var(--mainColor-Primary_light);
     text-align: center;
     /*--Text Formating--*/
     font-size: var(--interFont-size);
@@ -677,9 +677,9 @@ td {
 }
 
 .tableRow:hover td {
-
-    background-color: var(--mainColor-Primary_light);
-    color: var(--colorFont-bright);
+    font-size: var(--interFont-size);
+    background-color: var(--mainColor-Primary);
+    color: white;
 
 }
 
@@ -704,8 +704,30 @@ td {
 
     /*--Colors--*/
     background-color: var(--mainColor-Primary_dark);
-    color: white;
+ 
 }
+.footIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 1em;
+    width: 10%;
+    color: white;
+    font-size: var(--littleFont-size);
+
+}
+
+.footIcon img {
+    /*--Positionning*/
+
+    /*inherit from upperHeader.display:flex & upperHeader.flex-direction :row & upperHeader.justify-content:space-evenly--*/
+
+    /*--Ratio--*/
+    max-width: 100%;
+    height: auto;
+}
+
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 768px) { 
@@ -729,44 +751,26 @@ td {
    
     .menu{
         display: none;
-        visibility: hidden;
+       
     }
 
     #sideBar{
         display: none;
-        visibility: hidden;
-    
-    
-       
-        
+  
     }
 
-    header{
-        height :20%;
-        background-color:transparent;
-    }
+
 
     /*--header div img id : logo--*/
 
 /*--logo--*/
-#bannerHeader{
-    /*--Display--*/
-    display: flex;
-    flex-direction: row;
 
-    /*--Content Align--*/
-    justify-content: space-evenly;
 
-    /*--Sizing--*/
-    height: 80%;
-background-color: var(--mainColor-Accent_Color);
-
-}
 
 #siteLogo {
-
+    margin-top: 1em;
     margin-left: 1em;
-    width: 15%;
+    width: 12%;
 
 
 }
@@ -806,7 +810,8 @@ background-color: var(--mainColor-Accent_Color);
 }
 
 #navSection {
-    visibility: visible;/*problem */
+   display: inline;
+    
     /*--Sizing--*/
     width: 100%;
     height: 20%;
@@ -814,8 +819,7 @@ background-color: var(--mainColor-Accent_Color);
     /*--Outside Spacing--*/
     margin: 0 auto;
 
-    /*--Colors--*/
-    background-color: transparent !important;
+
 }
 
 #navSection a {
@@ -872,7 +876,7 @@ background-color: var(--mainColor-Accent_Color);
     margin-bottom: 0%;
 
     /*--Colors--*/
-    background-color: var(--mainColor-Accent_Color);
+    background-color: var(--mainColor-Primary);
 
     /*--Text Formating--*/
     text-align: center;
@@ -903,12 +907,19 @@ background-color: var(--mainColor-Accent_Color);
     /*--Display--*/
     /*--Sub Menu is hidden--*/
     display: none;
+    
+}
+/*Bcp de problemes de nav !!*/
+.subNavItem a{
+
 
 }
 
 nav>ul li:hover .subNavList {
     /*--Display--*/
     /*--Sub menu developps--*/
+    background-color: var(--mainColor-Primary_light);
+    color: var(--mainColor-Primary_dark);
     display: block;
 }
 /*---------------------------MAIN------------------*/
