@@ -11,7 +11,6 @@ let sideBarToggler = document.querySelector('.menu');
 
 sideBarToggler.addEventListener('click', () => {
     sideBar.classList.toggle('show');
-
     sideBarToggler.classList.toggle('opened')
     sideBarToggler.setAttribute('aria-expanded',sideBarToggler.classList.contains('opened')); 
     sideBarToggler.classList.contains('opened')
@@ -25,8 +24,6 @@ window.addEventListener('click', (e) => {
      console.log('Sidebar clicked out')
      sideBar.classList.remove('show');
      sideBarToggler.classList.remove('opened')
-     
-     
     }
 });
 
