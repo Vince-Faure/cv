@@ -19,30 +19,21 @@
 :root {
 
     /*--TESTS TOOLS--*/
-
     --testColor-1: red;
     --testColor-2: blue;
-
     --testBorder-1: 2px solid red;
     --testBorder-2: 5px solid blue;
-
     /*GLOBAL COLORS--*/
     --mainColor-Primary: #0E8388;
     --mainColor-Primary_dark: #2E4F4F;
     --mainColor-Primary_light: #CBE4DE;
     --mainColor-Accent_Color: #2C3333;
-
-
     --GlobalBorder-style: 4px solid #2F4858;
     --GlobalBorder-styleLight: 1px solid #2F4858;
     --BlankBorder-style: 0px solid transparent;
-
-
     /*--GLOBAL FONTS--*/
-
     --primaryFont-family: "roboto-regular";
     --secondaryFont-family: "DMSans-regular";
-
     /*--GLOBAL FONTS-styles-*/
     --basicFont-weight: "normal";
     --littleFont-size: 0.8em;
@@ -60,7 +51,6 @@
     /*--RESET OUTSIDE & INSIDE SPACING--*/
     margin: 0;
     padding: 0;
-
     /*--RESET BASIC FONTS--*/
     font-size: var(--basicFont-size);
     font-family: var(--primaryFont-family);
@@ -90,16 +80,12 @@
 /*--------------------------------------------BODY--------------------------------------------*/
 
 body {
-
-
     /*--Outside Spacing--*/
     margin: auto;
-
     /*--Sizing--*/
     width: 100%;
     display: flex;
     flex-direction: column;
-
     /*--Colors--*/
     background-color: white;
 
@@ -111,41 +97,32 @@ body {
 
 
 header {
-
     /*--Positionning--*/
     position: fixed;
-    
-
     /*--Display--*/
     display: flex;
     flex-direction: column;
-    
-
     /*--Sizing--*/
     width: 100%;
-    height:8em;
-
+    height: auto !important;
+    padding: 0.5em;
     /*--Colors--*/
     background-color: var(--mainColor-Primary_dark);
 
 }
-#navSection{
+
+#navSection {
     display: none;
 
 }
 
 /*--header div id : bannerHeader--*/
 
-#bannerHeader{
-
+#bannerHeader {
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 }
-
-
-
-/*--header div img id : logo--*/
-
 
 /*--logo--*/
 #siteLogo {
@@ -153,16 +130,10 @@ header {
     align-items: center;
     margin-top: 1em;
     margin-left: 1em;
-    width: 10%;
-
-
+    width: 24%;
 }
 
 #logo {
-    /*--Positionning*/
-
-    /*inherit from upperHeader.display:flex & upperHeader.flex-direction :row & upperHeader.justify-content:space-evenly--*/
-
     /*--Ratio--*/
     max-width: 100%;
     height: auto;
@@ -174,31 +145,25 @@ header {
 
 #siteTitle {
 
-    display: flex;
-    align-items: center;
-    margin-left: 0.5em;
+
+
+
     /*--Sizing--*/
     width: 100%;
     height: 100%;
-    
+    margin-left: 1em;
+    font-size: 3em;
+    color: white
+}
 
+#siteTitle>h1 {
+    vertical-align: middle;
 
-    /*--Outside Spacing--*/
-
-
-
-    /*--Text Formating--*/
-    font-size: var(--bigFont-size);
-    color: white;
 }
 
 
-/*  ----NAV BAR----
 
-
-
-*/
-#sideBar {
+*/ #sideBar {
     position: fixed;
     top: 0;
     left: 0;
@@ -210,7 +175,6 @@ header {
     margin: 0;
     background-color: var(--mainColor-Primary_light);
     box-shadow: 0 10px 20px -4px #000;
-
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
@@ -248,17 +212,20 @@ header {
     height: 15%;
     background-color: var(--mainColor-Primary);
 
-
-
 }
 
-.sideBarHead h1 {
+.sideBarHead a {
+    text-decoration: none;
     margin-left: 0.5em;
     text-transform: uppercase;
-    font-size: var(--middleFont-size);
-    color: var(--colorFont-bright);
-
+    font-size: var(--bigFont-size);
 }
+
+#accueil {
+    font-size: var(--interFont-size);
+    color: white;
+}
+
 
 .sideBarBody {
     height: 80%;
@@ -272,19 +239,14 @@ header {
 #sideNavlinks {
     width: 100%;
     height: 100%;
-
 }
 
 #asideNavList {
     display: flex;
     flex-direction: column;
     align-items: left;
-
-
     width: 100%;
     height: 100%;
-
-
 }
 
 #asideNavList li {
@@ -293,9 +255,8 @@ header {
     justify-content: space-around;
     padding-left: 1.5em;
     height: 100%;
-
     list-style-type: none;
-    box-shadow: 0     3px 3px -4px #0000003d;
+    box-shadow: 0 3px 3px -4px #0000003d;
 }
 
 #asideNavList li a {
@@ -306,32 +267,20 @@ header {
 }
 
 
-
-/*
-.sideBarFoot{  
-}
-*/
 /*---- sideBar-Toggler ----*/
+
 .sideBarToggler {
     position: fixed;
-    
-    top: 1em;
-    right: 2em;
-    width: 3em;
-    height: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     cursor: pointer;
     overflow: hidden;
+
 }
 
 .sideBarToggler span {
-    
-    background-color: var(--mainColor-Primary_light);
-    width: 100%;
-    height: 0.2em;
-    border: 52px solid var(--mainColor-light);
+
     transition: all 0.3s ease;
     pointer-events: none;
     /* so that it doesn't overlap the sideBar_toggler */
@@ -345,7 +294,7 @@ header {
 #sideBar.show+.sideBarToggler span {
     margin-top: -1.2px;
     margin-bottom: -1.2px;
-    
+
 }
 
 #sideBar.show+.sideBarToggler span:first-child {
@@ -363,53 +312,60 @@ header {
 
 
 
-  .menu {position: fixed;
-    right:  1em;
-
+.menu {
+    position: fixed;
+    right: 1em;
+    top: 1.5em;
     background-color: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     padding: 0;
-    z-index : 100;
-  }
+    z-index: 100;
+}
 
-  
-  .line {
+
+.line {
     fill: none;
     stroke: black;
     stroke-width: 6;
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .line1 {
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
     stroke-dasharray: 60 207;
     stroke-width: 6;
-  }
-  .line2 {
+}
+
+.line2 {
     stroke-dasharray: 60 60;
     stroke-width: 6;
-  }
-  .line3 {
+}
+
+.line3 {
     stroke-dasharray: 60 207;
     stroke-width: 6;
-  }
-  .opened .line1 {
+}
+
+.opened .line1 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
-  }
-  .opened .line2 {
+}
+
+.opened .line2 {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
     stroke-width: 6;
-  }
-  .opened .line3 {
+}
+
+.opened .line3 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
-  }
-  
+}
+
 /*--------------------------------------------MAIN--------------------------------------------*/
 
 main {
@@ -418,36 +374,25 @@ main {
     /*--Positionning--*/
     position: fixed !important;
     top: 11%;
-    
-
     /*--Sizing--*/
     width: 100%;
     height: 80%;
-
     /*-- Overlap element--*/
     z-index: -10;
-
     /*--Display- Scroll-*/
     overflow-x: scroll;
     overflow-x: hidden;
-
     margin-left: auto;
     margin-right: auto;
-
-   margin-top: 0.5em;
-
+    margin-top: 0.5em;
     /*--Background Formating--*/
     background-color: white;
-
-
-
 }
 
 /*--Main Scroll Hidden--*/
 
 main::-webkit-scrollbar {
     display: none;
-
 }
 
 /*--Mainsections globals--*/
@@ -455,35 +400,23 @@ main::-webkit-scrollbar {
 .mainSection {
     display: flex;
     flex-direction: column;
-    
-
-
-
     /*--Sizing--*/
     width: 98%;
     height: 97%;
-
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-
-    /*--Inside Spacing--*/
-
-
     /*--Display- Scroll-*/
     overflow-x: hidden;
     overflow-y: scroll;
-
     /*--Colors--*/
     background-color: transparent;
-
 }
 
 /*--MainSection Scroll Hidden--*/
 
 .mainSection::-webkit-scrollbar {
-
     display: none;
 }
 
@@ -491,42 +424,36 @@ main::-webkit-scrollbar {
 /*--MainSection Competences,Parcours,loisir,info,liens--*/
 
 .subMainSection {
-
     width: 100%;
     height: 100%;
-
-
 }
+
 /*--Compétences menu--*/
-#compMenu{
- margin-left: auto;
- margin-right: auto;
-
-
+#compMenu {
+    margin-left: auto;
+    margin-right: auto;
 }
-#compRowUp{
 
+#compRowUp {
     margin-top: 2%;
-
-
 }
 
-.compRow{
+.compRow {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 33%;
-    
+
 }
 
-.cell{
+.cell {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     width: 33%;
     height: 100%;
 }
+
 /*
 .blankCell{
 
@@ -536,23 +463,20 @@ main::-webkit-scrollbar {
 
 
 
-.fullCell a{
-
-margin-right: auto;
-margin-left: auto;
-width: 9em;
-height :3em;
-text-align: center;
-line-height:3em;
-
- font-size: var(--interFont-size);
- font-weight: var(--basicFont-weight);
- color: var(--mainColor-Accent_Color);
- text-decoration: none;
- border: var(--GlobalBorder-styleLight);
- border-radius: 14px;
- background-color: var(--mainColor-Primary_light);
-
+.fullCell a {
+    margin-right: auto;
+    margin-left: auto;
+    width: 9em;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+    font-size: var(--interFont-size);
+    font-weight: var(--basicFont-weight);
+    color: var(--mainColor-Accent_Color);
+    text-decoration: none;
+    border: var(--GlobalBorder-styleLight);
+    border-radius: 14px;
+    background-color: var(--mainColor-Primary_light);
 }
 
 
@@ -562,24 +486,19 @@ line-height:3em;
     /*--Outside Spacing--*/
     margin-top: 2em;
     margin-left: 1em;
-   
     /*--Text Formating--*/
     font-family: var(--secondaryFont-family);
     font-size: var(--middleFont-size);
 }
 
 .subContent {
-
-
     /*--Outside Spacing--*/
     margin-top: 2em;
     margin-left: 1.5em;
     ;
-
     /*--Text Formating--*/
     font-family: var(--secondaryFont-family);
     font-size: var(--interFont-size);
-
 }
 
 
@@ -599,12 +518,9 @@ line-height:3em;
     /*--Sizing--*/
     width: 96%;
     height: 96%;
-
     /*--Outside Spacing--*/
-    
     margin-left: auto;
     margin-right: auto;
-
     /*--Colors--*/
     background-color: transparent !important;
 
@@ -613,14 +529,9 @@ line-height:3em;
 }
 
 table {
-
-
-
     table-layout: fixed;
-
     width: 100%;
     height: 100%;
-
     border-collapse: collapse;
 
 }
@@ -630,7 +541,6 @@ table {
 thead th {
 
     height: 4em;
-
     background-color: var(--mainColor-Primary_light);
     text-align: center;
     /*--Text Formating--*/
@@ -642,16 +552,11 @@ thead th {
 }
 
 #rightTh {
-
     border-radius: 0 16px 0 0;
 }
 
 thead th:nth-child(1) {
-
-
     width: 20%;
-
-
 }
 
 thead th:nth-child(2) {
@@ -659,7 +564,6 @@ thead th:nth-child(2) {
 }
 
 thead th:nth-child(3) {
-
     width: 40%;
 }
 
@@ -671,7 +575,6 @@ td {
 }
 
 td {
-
     /*--Text Formating--*/
     font-size: var(--basicFont-size);
 }
@@ -680,32 +583,28 @@ td {
     font-size: var(--interFont-size);
     background-color: var(--mainColor-Primary);
     color: white;
-
 }
 
 
 /*--------------------------------------------FOOTER--------------------------------------------*/
 
-#foot{
+#foot {
     /*--Positionning--*/
     bottom: 0;
     position: fixed;
     z-index: 0;
-
     /*--Display--*/
     display: flex;
     justify-content: right;
     align-items: center;
-   
-
     /*--Sizing--*/
     width: 100%;
-    height:10%;
-
+    height: 10%;
     /*--Colors--*/
     background-color: var(--mainColor-Primary_dark);
- 
+
 }
+
 .footIcon {
     display: flex;
     flex-direction: column;
@@ -720,25 +619,23 @@ td {
 
 .footIcon img {
     /*--Positionning*/
-
     /*inherit from upperHeader.display:flex & upperHeader.flex-direction :row & upperHeader.justify-content:space-evenly--*/
-
     /*--Ratio--*/
     max-width: 100%;
     height: auto;
 }
 
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
 
     :root {
-
-
-    
         --primaryFont-family: "roboto-regular";
         --secondaryFont-family: "DMSans-regular";
-    
         /*--GLOBAL FONTS-styles-*/
         --basicFont-weight: "normal";
         --littleFont-size: 0.8em;
@@ -746,146 +643,108 @@ td {
         --interFont-size: 1.25em;
         --middleFont-size: 1.5em;
         --bigFont-size: 2em;
-
-    }
-   
-    .menu{
-        display: none;
-       
     }
 
-    #sideBar{
+    .menu {
         display: none;
-  
+    }
+
+    #sideBar {
+        display: none;
     }
 
 
 
     /*--header div img id : logo--*/
 
-/*--logo--*/
+    /*--logo--*/
+    header {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 20% !important;
+        justify-content: space-between;
+    }
 
 
+    #siteLogo {
+        margin-top: 1em;
+        margin-left: 1em;
+    }
 
-#siteLogo {
-    margin-top: 1em;
-    margin-left: 1em;
-    width: 12%;
+    #logo {
+        /*--Ratio--*/
+        width: 50%;
+        height: auto;
+    }
 
+    /*--header div span id : sitetitle--*/
 
-}
+    /*--title--*/
 
-#logo {
-    /*--Positionning*/
+    #siteTitle {
+        margin-left: 2em;
+        /*--Sizing--*/
+        width: 100%;
+        height: 100%;
+        /*--Text Formating--*/
+        font-size: var(--bigFont-size);
+        color: white;
+    }
 
-    /*inherit from upperHeader.display:flex & upperHeader.flex-direction :row & upperHeader.justify-content:space-evenly--*/
+    #navSection {
+        display: inline;
+        /*--Sizing--*/
+        width: 100%;
+        height: 23%;
+    }
 
-    /*--Ratio--*/
-    max-width: 100%;
-    height: auto;
-}
+    #navSection a {
+        /*--Positionning--*/
+        display: block;
+        /*--Inside Spacing--*/
+        padding: 10px 0px;
+        /*--Text Formating--*/
+        /*--Border Formating--*/
+        border-bottom: 2px solid transparent;
+    }
 
-/*--header div span id : sitetitle--*/
+    /*--navSection behaviour on mouse over--*/
 
-/*--title--*/
-
-#siteTitle {
-
-
-    margin-left:2em;
-    /*--Sizing--*/
-    width: 100%;
-    height: 100%;
-    
-
-
-    /*--Outside Spacing--*/
-
-
-
-    /*--Text Formating--*/
-    
-    font-size: var(--bigFont-size);
-    color: white;
-}
-
-#navSection {
-   display: inline;
-    
-    /*--Sizing--*/
-    width: 100%;
-    height: 20%;
-
-    /*--Outside Spacing--*/
-    margin: 0 auto;
+    #navSection a:hover {
+        /*--Colors--*/
+        background-color: var(--mainColor-Primary_light);
+    }
 
 
-}
-
-#navSection a {
-    /*--Positionning--*/
-    display: block;
-
-    /*--Inside Spacing--*/
-    padding: 10px 0px;
+    #navList,
+    .subNavList {
+        /*--Text Formating--*/
+        list-style: none;
+    }
 
 
+    .navItem {
+        /*--Positionning--*/
+        float: left;
 
-    /*--Text Formating--*/
-    text-decoration: none;
-    color: white;
+        /*--Sizing--*/
+        /*!! add a divider for each item added!!*/
+        width: calc(100%/5);
+        /*--Colors--*/
+        background-color: var(--mainColor-Primary);
+        /*--Text Formating--*/
+        text-align: center;
+    }
 
-    /*--Border Formating--*/
-    border-bottom: 2px solid transparent;
-
-}
-
-/*--navSection behaviour on mouse over--*/
-
-#navSection a:hover {
-
-    /*--Text Formating--*/
-    color: black;
-    ;
-    /*-- Border Formating--*/
-    border-bottom: 1px solid black;
-
-    /*--Colors--*/
-    background-color: var(--mainColor-Primary_light);
-}
+    .navitem,
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
 
-#navList,
-.subNavList {
-    /*--Text Formating--*/
-    list-style: none;
-
-}
-
-
-.navItem {
-    /*--Positionning--*/
-    float: left;
-
-    /*--Sizing--*/
-    /*!! add a divider for each item added!!*/
-    width: calc(100%/5);
-
-    /*--Outside Spacing--*/
-    margin-top: 0%;
-    margin-bottom: 0%;
-
-    /*--Colors--*/
-    background-color: var(--mainColor-Primary);
-
-    /*--Text Formating--*/
-    text-align: center;
-
-}
-
-
-
-/*--
+    /*--
     Imported Code :
     source :https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-menu-horizontal-sticky/
 
@@ -894,50 +753,38 @@ td {
      que nous allons appliquer à la liste en soi pour éviter que sa hauteur ne soit nulle."
     
     --*/
-#navList::after {
+    #navList::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-    content: "";
-    display: table;
-    clear: both;
-}
+    /*--SubMenu Behaviour--*/
 
-/*--SubMenu Behaviour--*/
+    .subNavList {
+        /*--Display--*/
+        /*--Sub Menu is hidden--*/
+        display: none;
+    }
 
-.subNavList {
-    /*--Display--*/
-    /*--Sub Menu is hidden--*/
-    display: none;
-    
-}
-/*Bcp de problemes de nav !!*/
-.subNavItem a{
+    /*Bcp de problemes de nav !!*/
+    .subNavItem>a {
+        color: white
+    }
 
+    nav>ul li:hover .subNavList {
+        /*--Display--*/
+        /*--Sub menu developps--*/
+        background-color: var(--mainColor-Primary_light);
+        display: block;
+    }
 
-}
-
-nav>ul li:hover .subNavList {
-    /*--Display--*/
-    /*--Sub menu developps--*/
-    background-color: var(--mainColor-Primary_light);
-    color: var(--mainColor-Primary_dark);
-    display: block;
-}
-/*---------------------------MAIN------------------*/
-main {
-
-
-    top: 20%;
-    width: 98%;
-    height: 67%;
-    margin-left: 0.4em;
-    
-    
-
-  
-    border: var(--testBorder-2);
-
-
+    /*---------------------------MAIN------------------*/
+    main {
+        top: 20%;
+        width: 98%;
+        height: 67%;
+        margin-left: 0.4em;
+    }
 
 }
-
- }
